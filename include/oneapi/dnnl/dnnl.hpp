@@ -537,6 +537,19 @@ inline dnnl_normalization_flags_t convert_to_c(normalization_flags flags) {
     return static_cast<dnnl_normalization_flags_t>(flags);
 }
 
+/// Flags for resampling primitives.
+enum class resampling_flags : unsigned {
+    none = dnnl_resampling_flags_none,
+    align_corners = dnnl_align_corners,
+};
+
+/// Converts resampling flags enum value from C++ API to C API type.
+/// @param flags C++ API resampling flags enum value.
+/// @returns Corresponding C API resampling flags enum value.
+inline dnnl_resampling_flags_t convert_to_c(resampling_flags flags) {
+    return static_cast<dnnl_resampling_flags_t>(flags);
+}
+
 /// @} dnnl_api_primitives_common
 
 /// @addtogroup dnnl_api_rnn

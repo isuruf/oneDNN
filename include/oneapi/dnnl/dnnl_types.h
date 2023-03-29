@@ -1872,6 +1872,19 @@ typedef enum {
 
 } dnnl_normalization_flags_t;
 
+/// Flags for resampling primitives.
+typedef enum {
+    /// Use no resampling flags
+    dnnl_resampling_flags_none = 0x0U,
+
+    /// Align corners when resampling
+    /// If specified:
+    ///
+    ///  - on forward resampling, align corners.
+    dnnl_align_corners = 0x1U,
+
+} dnnl_resampling_flags_t;
+
 /// @} dnnl_api_primitives_common
 /// @} dnnl_api_primitives
 
